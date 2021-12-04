@@ -23,7 +23,7 @@ const SearchHero = () => {
                   return errors
               }}
               onSubmit={async ({search},{resetForm}) =>{
-                const resp = await axios(`https://superheroapi.com/api/${key}/search//${search}`)
+                const resp = await axios(`https://superheroapi.com/api.php/${key}/search//${search}`)
                 if(resp.data.response === "error"){
                   setError(true)
                   resetForm({search:""})
